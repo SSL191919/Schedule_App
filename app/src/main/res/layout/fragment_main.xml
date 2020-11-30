@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical"
+            android:elevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+<!--            Year, Month and Back Next -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp">
+
+                <ImageView
+                    android:id="@+id/iv_back_year_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="4dp"
+                    android:layout_marginRight="4dp"
+                    android:foregroundTint="@color/colorWhite"
+                    android:src="@drawable/ic_baseline_navigate_back_24"
+                    app:tint="@color/colorBlack" />
+
+                <TextView
+                    android:id="@+id/text_month_year"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="May 2020"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/iv_next_year_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:foregroundTint="@color/colorWhite"
+                    android:src="@drawable/ic_baseline_navigate_next_24"
+                    app:tint="@color/colorBlack" />
+
+            </LinearLayout>
+
+<!--            Weeks Recycler View -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_week"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp" />
+
+        </LinearLayout>
+
+<!--        Days Recycler View -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_days"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:padding="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_days">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="350px"
+                        app:cardCornerRadius="12dp"
+                        android:layout_marginBottom="-8dp"
+                        android:padding="0dp"
+                        app:cardElevation="0dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="350px"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/top"
+                            />
+                    </androidx.cardview.widget.CardView>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="110px"
+                        android:scaleType="centerCrop"
+                        android:layout_marginTop="-6dp"
+                        android:src="@drawable/bottom"
+                        android:background="@color/colorLightGray"
+                        />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorLightGray"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:text="Your Schedule"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorRed"
+                    android:textStyle="bold"
+                    android:paddingStart="8dp" />
+                <!--        Days Recycler View -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_schedule"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/back_16dp_12dp_bottom"
+                    android:padding="4dp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floating_add_scedule_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:backgroundTint="@color/colorPrimary"
+            android:tint="@color/colorWhite"
+            android:clickable="true"
+            app:borderWidth="0dp"
+            android:src="@drawable/ic_baseline_add_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

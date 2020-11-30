@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/back_16dp_white"
+    android:layout_margin="4dp"
+    android:padding="8dp"
+    android:elevation="8dp"
+    tools:context=".FragmentDialogAddSchedule">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20dp"
+            android:padding="8dp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:text="Add Your Schedule"
+            android:textAllCaps="true"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorRed" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            android:textColor="@color/colorTextBlack"
+            android:padding="8dp"
+            android:textSize="18dp"
+            />
+
+
+        <TextView
+            android:id="@+id/text_schedule_date_selector"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_16dp_1dp_white"
+            android:padding="8dp"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="18dp"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Schedule"
+            android:textColor="@color/colorTextBlack"
+            android:padding="8dp"
+            android:textSize="18dp"
+            />
+
+        <EditText
+            android:id="@+id/edit_text_schedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_16dp_1dp_white"
+            android:padding="8dp"
+            android:textColor="@color/colorTextBlack"
+            android:textSize="18dp"
+            android:gravity="start"
+            android:textAlignment="textStart"
+            android:minLines="3"
+            android:maxLines="5"
+            />
+
+        <TextView
+            android:id="@+id/text_add_schedule_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_16dp_1dp_white"
+            android:backgroundTint="@color/colorPrimary"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:paddingLeft="28dp"
+            android:paddingRight="28dp"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="end"
+            android:text="Add"
+            android:textColor="@color/colorBlack"
+            android:textSize="18dp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

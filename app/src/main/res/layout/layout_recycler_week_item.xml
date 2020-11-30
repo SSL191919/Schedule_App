@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/back_16dp_white"
+    android:orientation="vertical"
+    android:foregroundTint="@color/colorPrimary"
+    android:gravity="center"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    android:layout_margin="4dp"
+    android:id="@+id/layout_week"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/text_week_name"
+        android:padding="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:text="Week 1" />
+
+</LinearLayout>

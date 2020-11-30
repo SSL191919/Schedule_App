@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Schedule App</string>
+
+
+    <string name="sample_text">Today I have have to finish my current project. Tomorrow is
+    deadline. And If I complete my job before deadline, I can make some time to walk
+        outside and also boss will be happy.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+
+</resources>
